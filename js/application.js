@@ -1,1 +1,5 @@
-console.log("hello world")
+$(function() {
+  window.appView = new AppView();
+});
+
+
