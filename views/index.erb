@@ -13,17 +13,22 @@
 <body>
 <h1>Kubrick Search</h1>
   <div id="search-field-container"></div>
+  <div id="search-results-container"></div>
   <script> var token = "<%= @config["token"] %>" </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src="js/views/search_field_view.js"></script>
+  <script src="js/views/search_results_view.js"></script>
   <script src="js/collections/artwork_collection.js"></script>
   <script src="js/application.js"></script>
 
   <script id="search-field-template" type="text/x-handlebars-template">
     {{label}}<input id="search-field-input">
+  </script>
+  <script id="search-results-template" type="text/x-handlebars-template">
+    <h2>Your search results</h2>
   </script>
 </body>
 </html>
