@@ -17,7 +17,6 @@ window.SearchFieldView = Backbone.View.extend({
   },
 
   updateSearch: function() {
-    console.log("updated search")
     window.artworkCollection.fetch({
       data: {token : window.token, s : $("#search-field-input").val()}
     })
