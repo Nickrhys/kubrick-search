@@ -33,8 +33,11 @@
     <h2>Your search results</h2>
     <ul>
     {{#each artworks}}
-      <li>
-          {{title}}<img src="{{artworkImage id}}">
+      <li style="white-space: nowrap; cursor: pointer;">
+        <div class="media" style="white-space: normal;">
+          <div class="media-img"><img src="{{artworkImage id}}"></div>
+          <div class="media-body">{{title}}</div>
+        </div>
       </li>
     {{/each}}
     </ul>
