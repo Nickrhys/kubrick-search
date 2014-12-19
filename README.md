@@ -1,4 +1,4 @@
-A NEW SEARCH API FOR KUBRICK
+A NEW SEARCH API
 ============================
 
 This is an app, produced using [Backbone.js](http://backbonejs.org/ "Backbone.js docs") that will allow the search function on Easyart.com to be more user friendly.
