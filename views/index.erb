@@ -22,6 +22,7 @@
   <script src="js/views/search_field_view.js"></script>
   <script src="js/views/search_results_view.js"></script>
   <script src="js/collections/artwork_collection.js"></script>
+  <script src="js/helpers/search_results_image_helper.js"></script>
   <script src="js/application.js"></script>
 
   <script id="search-field-template" type="text/x-handlebars-template">
@@ -30,7 +31,11 @@
   <script id="search-results-template" type="text/x-handlebars-template">
     <h2>Your search results</h2>
     <ul>
-      <li>I have {{artworks.length}} artworks</li>
+    {{#each artworks}}
+      <li>
+          {{title}}<img src="{{artworkImage id}}">
+      </li>
+    {{/each}}
     </ul>
   </script>
 </body>
