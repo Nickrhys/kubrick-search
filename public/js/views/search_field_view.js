@@ -1,4 +1,4 @@
-window.AppView = Backbone.View.extend({
+window.SearchFieldView = Backbone.View.extend({
 
 
   initialize: function(){
@@ -13,11 +13,14 @@ window.AppView = Backbone.View.extend({
   },
 
   events: {
-    "click #search-field-input": "updateSearch"
+    "keyup #search-field-input": "updateSearch"
   },
 
   updateSearch: function() {
     console.log("updated search")
+    window.artworkCollection.fetch({
+      data: {token : window.token, s : $("#search-field-input").val()}
+    })
   }
 });
 
