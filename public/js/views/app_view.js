@@ -6,12 +6,14 @@ window.AppView = Backbone.View.extend({
     this.template = Handlebars.compile(source);
     this.render();
   },
-  events: {
-    "click #search-field-input": "updateSearch"
-  },
+
 
   render: function() {
-    $("#search-field-container").html(this.template({label: "search term"}));
+    $("#search-field-container").html(this.template({label: "Search term "}));
+  },
+
+  events: {
+    "click #search-field-input": "updateSearch"
   },
 
   updateSearch: function() {

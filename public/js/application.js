@@ -1,5 +1,5 @@
 $(function() {
-  window.appView = new AppView($("#search-field-container"));
+  window.appView = new AppView({ el: $("#search-field-container") });
   window.artworkCollection = new ArtworkCollection();
 });
 
