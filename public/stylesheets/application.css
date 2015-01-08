@@ -3,7 +3,7 @@
 }
 
 ul {
-  width: 34%;
+  width: 24%;
   margin-top: 2px;
   margin-left: 4px;
   padding: 5px 0;
@@ -21,7 +21,7 @@ ul {
 
 ul li{
   clear: both;
-  display: inline-block;
+  overflow: hidden;
 }
 
 .media-img {
@@ -38,6 +38,6 @@ ul li{
 }
 
 .media-body {
-
+  padding-right: 5px;
   overflow: hidden;
 }
