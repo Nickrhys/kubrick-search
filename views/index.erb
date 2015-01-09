@@ -1,46 +1,46 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-  <title>Easyart search project</title>
+    <title>Easyart search project</title>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/stylesheets/application.css">
-</head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+  </head>
 
-<body>
-<h1>Kubrick Search</h1>
-  <div id="search-field-container"></div>
-  <div id="search-results-container"></div>
-  <script> var token = "<%= @config["token"] %>" </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-  <script src="js/views/search_field_view.js"></script>
-  <script src="js/views/search_results_view.js"></script>
-  <script src="js/collections/artwork_collection.js"></script>
-  <script src="js/helpers/search_results_image_helper.js"></script>
-  <script src="js/application.js"></script>
+  <body>
+  <h1>Kubrick Search</h1>
+    <div id="search-field-container"></div>
+    <div id="search-results-container"></div>
+    <script> var token = "<%= @config["token"] %>" </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="js/views/search_field_view.js"></script>
+    <script src="js/views/search_results_view.js"></script>
+    <script src="js/collections/artwork_collection.js"></script>
+    <script src="js/helpers/search_results_image_helper.js"></script>
+    <script src="js/application.js"></script>
 
-  <script id="search-field-template" type="text/x-handlebars-template">
-    {{label}}<input id="search-field-input" placeholder="Search...">
-  </script>
-  <script id="search-results-template" type="text/x-handlebars-template">
-    <ul>
-    {{#each artworks}}
-      <li style="white-space: nowrap; cursor: pointer;">
-        <div class="media" style="white-space: normal;">
-          <div class="media-img"><img src="{{artworkImage id}}"></div>
-          <div class="media-body">{{title}}</div>
-          <span class="text-muted">{{artist.full_name}}</span>
-        </div>
-      </li>
-    {{/each}}
-    </ul>
-  </script>
-</body>
+    <script id="search-field-template" type="text/x-handlebars-template">
+      {{label}}<input id="search-field-input" placeholder="Search...">
+    </script>
+    <script id="search-results-template" type="text/x-handlebars-template">
+      <ul>
+      {{#each artworks}}
+        <li style="white-space: nowrap; cursor: pointer;">
+          <div class="media" style="white-space: normal;">
+            <div class="media-img"><img src="{{artworkImage id}}"></div>
+            <div class="media-body">{{title}}</div>
+            <span class="text-muted">{{artist.full_name}}</span>
+          </div>
+        </li>
+      {{/each}}
+      </ul>
+    </script>
+  </body>
 </html>
