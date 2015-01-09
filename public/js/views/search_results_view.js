@@ -9,9 +9,19 @@ window.SearchResultsView = Backbone.View.extend({
   },
 
   render: function(){
-    $("#search-results-container").html(this.template({artworks: window.artworkCollection.toJSON()}));
-    console.log("rendering");
+    if ($("#search-field-input").val() != ""){
+      $("#search-results-container").html(this.template({artworks: window.artworkCollection.toJSON()}));
+      console.log("rendering");
+    }
+    else {
+      this.empty()
+    }
   },
+
+  empty: function(){
+    $("#search-results-container").empty()
+    console.log("emptying");
+  }
 
 });
 
