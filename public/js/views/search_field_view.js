@@ -7,7 +7,7 @@ window.SearchFieldView = Backbone.View.extend({
   },
 
   render: function() {
-    $("#search-field-container").html(this.template({label: "Search term "}));
+    $("#search-field-container").html(this.template({label: ""}));
   },
 
   events: {

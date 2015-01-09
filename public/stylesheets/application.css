@@ -1,8 +1,10 @@
 #search-field-input{
+  margin-left: 79px;
   border-radius: 3px;
   box-shadow: none;
   border: solid 1px #ccc;
 }
+
 
 ul {
   width: 30%;
